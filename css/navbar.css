@@ -1,0 +1,351 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.4s;
+
+}
+
+header.sticky{
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+body.dark header.sticky{
+
+    background:rgba(15,23,42,.85);
+
+}
+
+.navbar{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:var(--text);
+
+    cursor:pointer;
+
+}
+
+.logo span{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================
+   NAV LINKS
+========================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:var(--text);
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   RIGHT NAV
+========================================== */
+
+.right-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* ==========================================
+   DARK MODE BUTTON
+========================================== */
+
+#theme-toggle{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+#theme-toggle:hover{
+
+    transform:rotate(180deg);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   MENU BUTTON
+========================================== */
+
+.menu-btn{
+
+    display:none;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--card);
+
+    box-shadow:var(--shadow);
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu-btn i{
+
+    font-size:22px;
+
+    color:var(--primary);
+
+}
+
+.menu-btn:hover{
+
+    background:var(--primary);
+
+}
+
+.menu-btn:hover i{
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   ACTIVE LINK
+========================================== */
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+}
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+@media(max-width:900px){
+
+.nav-links{
+
+    position:fixed;
+
+    top:80px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:calc(100vh - 80px);
+
+    background:var(--card);
+
+    box-shadow:-10px 0 25px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding-top:60px;
+
+    gap:35px;
+
+    transition:.4s;
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.menu-btn{
+
+    display:flex;
+
+}
+
+}
+
+/* ==========================================
+   SMALL DEVICES
+========================================== */
+
+@media(max-width:600px){
+
+.navbar{
+
+    width:94%;
+
+}
+
+.logo{
+
+    font-size:26px;
+
+}
+
+#theme-toggle{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.menu-btn{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+}

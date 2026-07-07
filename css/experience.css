@@ -1,0 +1,588 @@
+/*=========================================
+        EXPERIENCE SECTION
+=========================================*/
+
+#experience{
+
+    position: relative;
+
+    background: linear-gradient(
+        135deg,
+        rgba(37,99,235,.03),
+        rgba(124,58,237,.03)
+    );
+
+    padding: 100px 0 0px;
+
+    overflow: visible;
+
+}
+
+.experience-container{
+
+    width: 90%;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+/*=========================================
+        EXPERIENCE CARD
+=========================================*/
+
+.experience-card{
+
+    position: sticky;
+
+    top: 100px;
+
+    background: rgba(255,255,255,.95);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    margin-bottom: 120px;
+
+    border-left: 6px solid var(--primary);
+
+    box-shadow: 0 20px 45px rgba(0,0,0,.12);
+
+    transition: all .45s ease;
+
+    overflow: hidden;
+
+}
+
+body.dark .experience-card{
+
+    background: rgba(30,41,59,.95);
+
+}
+
+/*=========================================
+        TOP GRADIENT BAR
+=========================================*/
+
+.experience-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/*=========================================
+        HOVER
+=========================================*/
+
+.experience-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    box-shadow:0 35px 70px rgba(37,99,235,.20);
+
+}
+
+/*=========================================
+        YEAR BADGE
+=========================================*/
+
+.year{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================
+        HEADINGS
+=========================================*/
+
+.experience-card h3{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+}
+
+.experience-card h4{
+
+    color:var(--primary);
+
+    font-size:20px;
+
+    margin-bottom:18px;
+
+}
+
+.experience-card p{
+
+    line-height:1.8;
+
+    font-size:16px;
+
+    color:var(--text-light);
+
+}
+
+/*=========================================
+        TECH STACK
+=========================================*/
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:25px;
+
+}
+
+.tech-stack span{
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:rgba(37,99,235,.08);
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.tech-stack span:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}  
+
+/*=========================================
+        EXPERIENCE BUTTONS
+=========================================*/
+
+.exp-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.exp-buttons a{
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.exp-buttons a:first-child{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+}
+
+.exp-buttons a:last-child{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.exp-buttons a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.20);
+
+}
+
+/*=========================================
+        CATEGORY COLORS
+=========================================*/
+
+/* Internships */
+
+.experience-card:nth-child(1),
+.experience-card:nth-child(2),
+.experience-card:nth-child(3){
+
+    border-left-color:#2563EB;
+
+}
+
+/* Leadership */
+
+.experience-card:nth-child(4),
+.experience-card:nth-child(5),
+.experience-card:nth-child(6){
+
+    border-left-color:#7C3AED;
+
+}
+
+/* Community */
+
+.experience-card:nth-child(7),
+.experience-card:nth-child(8){
+
+    border-left-color:#06B6D4;
+
+}
+
+/*=========================================
+        STACK ORDER
+=========================================*/
+
+.experience-card:nth-child(1){
+
+    z-index:1;
+
+}
+
+.experience-card:nth-child(2){
+
+    z-index:2;
+
+}
+
+.experience-card:nth-child(3){
+
+    z-index:3;
+
+}
+
+.experience-card:nth-child(4){
+
+    z-index:4;
+
+}
+
+.experience-card:nth-child(5){
+
+    z-index:5;
+
+}
+
+.experience-card:nth-child(6){
+
+    z-index:6;
+
+}
+
+.experience-card:nth-child(7){
+
+    z-index:7;
+
+}
+
+.experience-card:nth-child(8){
+
+    z-index:8;
+
+}
+
+/*=========================================
+        CARD ANIMATION
+=========================================*/
+
+.experience-card{
+
+    animation:cardFade .8s ease both;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        HOVER EFFECT
+=========================================*/
+
+.experience-card:hover .year{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.experience-card:hover h4{
+
+    color:var(--secondary);
+
+}
+
+.experience-card:hover .tech-stack span{
+
+    transform:translateY(-3px);
+
+}
+
+/*=========================================
+        GLASS GLOW
+=========================================*/
+
+.experience-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+
+    right:-80px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.08);
+
+    filter:blur(45px);
+
+    z-index:-1;
+
+}
+
+/*=========================================
+        DARK MODE
+=========================================*/
+
+body.dark .year{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+body.dark .tech-stack span{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+#experience{
+
+padding:90px 0 300px;
+
+}
+
+.experience-container{
+
+width:94%;
+
+}
+
+.experience-card{
+
+top:80px;
+
+padding:30px;
+
+margin-bottom:90px;
+
+}
+
+.experience-card h3{
+
+font-size:26px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#experience{
+
+padding:70px 0 180px;
+
+}
+
+.experience-card{
+
+position:relative;
+
+top:0;
+
+margin-bottom:35px;
+
+padding:25px;
+
+}
+
+.experience-card h3{
+
+font-size:22px;
+
+}
+
+.experience-card h4{
+
+font-size:18px;
+
+}
+
+.tech-stack{
+
+gap:8px;
+
+}
+
+.tech-stack span{
+
+font-size:12px;
+
+padding:6px 12px;
+
+}
+
+.exp-buttons{
+
+flex-direction:column;
+
+}
+
+.exp-buttons a{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.experience-card{
+
+padding:20px;
+
+border-radius:18px;
+
+}
+
+.year{
+
+font-size:12px;
+
+}
+
+.experience-card p{
+
+font-size:14px;
+
+}
+
+.tech-stack{
+
+justify-content:center;
+
+}
+
+}
+
+/*=========================================
+        SMOOTH SCROLL FEEL
+=========================================*/
+
+.experience-card{
+
+will-change:transform;
+
+transform-origin:center top;
+
+}

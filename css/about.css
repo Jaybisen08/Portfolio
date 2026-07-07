@@ -1,0 +1,370 @@
+/*=========================================
+            ABOUT SECTION
+=========================================*/
+
+#about{
+
+    background:var(--bg);
+
+}
+
+.about-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*=========================================
+          PROFILE IMAGE
+=========================================*/
+
+.about-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.about-image img{
+
+    width:360px;
+
+    height:450px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    border:6px solid rgba(255,255,255,.6);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.12);
+
+}
+
+.about-image img:hover{
+
+    transform:scale(1.04) rotate(-2deg);
+
+}
+
+/*=========================================
+        ABOUT CONTENT
+=========================================*/
+
+.about-content h3{
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+    color:var(--text);
+
+}
+
+.about-content p{
+
+    font-size:16px;
+
+    line-height:1.75;
+
+    max-width:620px;
+
+    margin-bottom:28px;
+
+}
+
+/*=========================================
+            INFO BOXES
+=========================================*/
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+.info-card{
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.info-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+}
+
+.info-card p{
+
+    margin:0;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+            STATS
+=========================================*/
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-top:25px;
+
+}
+
+.stat{
+
+    background:var(--card);
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+    min-height:150px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stat:hover{
+
+    transform:translateY(-10px);
+
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+    color:#fff;
+
+}
+
+.stat:hover p{
+
+    color:#fff;
+
+}
+
+.stat h2{
+    font-size:40px;
+    line-height:1.2;
+    white-space:nowrap;
+    overflow:visible;
+    width:100%;
+    text-align:center;
+}
+
+.stat:hover h2{
+
+    color:#fff;
+
+}
+
+.stat p{
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+/*=========================================
+        EDUCATION CARD
+=========================================*/
+
+.education{
+
+    margin-top:50px;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.education h3{
+
+    margin-bottom:20px;
+
+    color:var(--primary);
+
+}
+
+.education-item{
+
+    padding:18px 0;
+
+    border-left:4px solid var(--primary);
+
+    padding-left:22px;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+}
+
+.education-item::before{
+
+    content:"";
+
+    width:16px;
+
+    height:16px;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    position:absolute;
+
+    left:-10px;
+
+    top:25px;
+
+}
+
+.education-item h4{
+
+    margin-bottom:6px;
+
+}
+
+.education-item span{
+
+    color:var(--primary);
+
+    font-size:14px;
+
+}
+
+.education-item p{
+
+    margin-top:8px;
+
+    font-size:15px;
+
+}
+
+/*=========================================
+            RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.about-container{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.about-image{
+
+    order:1;
+
+}
+
+.about-content{
+
+    order:2;
+
+}
+
+.info-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:600px){
+
+.about-image img{
+
+    width:280px;
+
+    height:280px;
+
+}
+
+.about-content h3{
+
+    font-size:28px;
+
+}
+
+.stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.education{
+
+    padding:20px;
+
+}
+
+}

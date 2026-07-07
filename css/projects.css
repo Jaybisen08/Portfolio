@@ -1,0 +1,350 @@
+/*=========================================
+            PROJECTS SECTION
+=========================================*/
+
+#projects{
+
+    background:linear-gradient(
+        135deg,
+        rgba(37,99,235,.04),
+        rgba(124,58,237,.04)
+    );
+
+}
+
+.projects-grid{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+    justify-content:center;
+
+    align-items:start;
+
+}
+
+/*=========================================
+            PROJECT CARD
+=========================================*/
+.project-card{
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    max-width:380px;
+
+    justify-self:center;
+
+}
+
+.project-card:nth-child(7){
+
+    grid-column:2;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+/*=========================================
+            IMAGE
+=========================================*/
+
+.project-card img{
+
+    width:100%;
+
+    height:200px;
+
+    object-fit:cover;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================
+            CONTENT
+=========================================*/
+
+.project-info{
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.project-info h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:var(--text);
+
+}
+
+.project-info p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================
+            TECH TAGS
+=========================================*/
+
+.tech{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+
+}
+
+.tech span{
+
+    background:rgba(37,99,235,.1);
+
+    color:var(--primary);
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+            BUTTONS
+=========================================*/
+
+.buttons{
+
+    margin-top:auto;
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.buttons a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.buttons a:first-child{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+}
+
+.buttons a:last-child{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.buttons a:first-child:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.buttons a:last-child:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================
+        PROJECT NUMBER
+=========================================*/
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+/*=========================================
+        IMAGE OVERLAY
+=========================================*/
+
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:240px;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.18)
+
+    );
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+        HOVER GLOW
+=========================================*/
+
+.project-card:hover{
+
+    box-shadow:
+
+    0 20px 50px rgba(37,99,235,.20);
+
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:992px){
+
+.projects-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.project-card:nth-child(7){
+
+    grid-column:auto;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.project-card img{
+
+    height:220px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.project-info{
+
+    padding:22px;
+
+}
+
+.project-info h3{
+
+    font-size:24px;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+}
+
+}
