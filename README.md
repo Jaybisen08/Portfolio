@@ -14,7 +14,7 @@ This portfolio showcases my skills, projects, internships, certifications, achie
 
 ## 📸 Preview
 
-![Portfolio Preview](screenshots/Screenshot2026-07-08221811.png)
+![Portfolio Preview](home.png)
 
 ---
 
